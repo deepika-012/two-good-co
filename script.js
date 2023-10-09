@@ -40,7 +40,7 @@ function scrollanimation() {
 
 }
 scrollanimation()
-function navBarAnimation(){
+function navBarAnimation() {
     gsap.to('#nav-part1 svg', {
         transform: 'translateY(-100%)',
         scrollTrigger: {
@@ -49,19 +49,19 @@ function navBarAnimation(){
             start: 'top 0%',
             end: 'top -5%',
             scrub: true
-    
+
         }
     })
     gsap.to('#nav-part2 #links', {
         transform: 'translateY(-100%)',
-        opacity:0,
+        opacity: 0,
         scrollTrigger: {
             trigger: '#page1',
             scroller: '#main',
             start: 'top 0%',
             end: 'top -5%',
             scrub: true
-    
+
         }
     })
 }
@@ -78,10 +78,10 @@ tl.from('#page1 h1', {
 })
 tl.from('#page2 img', {
     y: 100,
-    delay: .4,
     scale: .7,
-    opacity: 0,
+    opacity:0,
     stagger: .4,
+  
 })
 
 
@@ -102,21 +102,21 @@ page2.addEventListener('mousemove', function (e) {
         top: e.y - 30,
     })
 })
-document.querySelector('#page5').addEventListener("mousemove", function (dets) {
-    gsap.to("#cursor", {
-        left: dets.x,
-        top: dets.y,
-        transform: 'translate(-50%, -50%) scale(1)',
+// document.querySelector('#page5').addEventListener("mouseenter", function (dets) {
+//     gsap.from("#cursor", {
+//         left: dets.x,
+//         top: dets.y,
+//         scale:1
 
-    });
-});
-document.querySelector('#page5').addEventListener("mouseleave", function (dets) {
-    gsap.to("#cursor", {
-        left: dets.x,
-        top: dets.y,
-        transform: 'translate(-50%, -50%) scale(0)',
+//     });
+// });
+// document.querySelector('#page5 ').addEventListener("mouseleave", function (dets) {
+//     gsap.from("#cursor", {
+//         left: dets.x,
+//         top: dets.y,
+//         scale:0
 
-    });
-});
+//     });
+// });
 
 

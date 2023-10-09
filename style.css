@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Gilroy';
     font-family: Arial, Helvetica, sans-serif;
 
 }
@@ -18,7 +17,19 @@ html {
     width: 100vw;
     background: #F7F7F7;
 }
-#nav{
+
+#cursor {
+
+    height: 180px;
+    width: 180px;
+    background-color: rgba(224, 139, 189, 0.814);
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: 9
+}
+
+#nav {
     height: 120px;
     width: 100%;
     position: fixed;
@@ -29,32 +40,38 @@ html {
     align-items: flex-start;
     text-transform: uppercase;
 }
+
 #nav #nav-part1 {
     /* background-color: #ffa500; */
     height: 83px;
     overflow: hidden;
 }
-#nav #nav-part1 svg{
-  display: block;
+
+#nav #nav-part1 svg {
+    display: block;
 }
-#nav #nav-part2{
+
+#nav #nav-part2 {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 50px;
 }
-#nav  #links a{
+
+#nav #links a {
     text-decoration: none;
     color: #333;
     margin: 0 20px;
     font-size: 13px;
 
 }
-#nav #icons i{
+
+#nav #icons i {
     margin: 0 20px;
     font-size: 20px;
 
 }
+
 #page1 {
     height: 100vh;
     position: relative;
@@ -131,6 +148,55 @@ html {
     border-radius: 50px;
     background-color: lightpink;
     position: absolute;
+    transition: all ease-in .3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.dets img{
+    display: none;
+}
+.elem .dets:hover {
+    height: 200px;
+}
+.elem .dets:hover img{
+    height: 200px;
+}
+
+#page4 {
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5vh 5vw;
+}
+
+#page4 .left h1 {
+    font-size: 60px;
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 58px;
+}
+
+#page4 .right p {
+    font-size: 17px;
+    line-height: 24px;
+    padding: 0 4vw;
+}
+
+#page4 .right .p {
+    border-bottom: 1px solid black;
+    width: 108px;
+    font-size: 12px;
+    margin-top: 20px;
+    margin-left: 60px;
+}
+
+#page4 .right .p:hover {
+    cursor: pointer;
+    border-bottom: 1px solid white;
 
 }
 
@@ -152,21 +218,83 @@ html {
     align-items: center;
 }
 
+
 .child img {
     height: 100%;
     /* width: 80%; */
 }
 
-#cursor {
+#page6 {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#page6 .left {
+    height: 100%;
+    width: 30%;
+    padding: 7vh;
+
+}
+
+#page6 .left p {
+    line-height: 30px;
+
+}
+
+#page6 .right {
+    height: 100%;
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+#page6 .right img {
+    width: 90%;
+
+}
+#footer {
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5vh 2vw;
+}
+#footer .two{
+    width: 60%;
+    height: 100%;
+    padding: 10vh 6vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#footer .one{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     
-        height: 180px;
-        width: 180px;
-        background-color: rgba(224, 139, 189, 0.814);
-        border-radius: 50%;
-        position: fixed;
-        transform: translate(-50%, -50%) scale(0);
-        z-index:9
-    
+}
+#footer .three{
+
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#footer .three p{
+   text-align: end;
+}
+#footer .two svg{
+    width: 40%;
+    height: 50%;
 }
 
 @media (max-width:600px) {
@@ -224,6 +352,7 @@ html {
         overflow: hidden;
         margin-bottom: 3vw;
     }
+
     #page5 {
         min-height: 100vh;
         width: 100%;
@@ -233,14 +362,15 @@ html {
         align-items: center;
         flex-wrap: wrap;
     }
-    
+
     #page5 .child {
         height: 45vh;
         width: 90vw;
-        padding: 5vw ;
-      
+        padding: 5vw;
+
     }
-    #nav{
+
+    #nav {
         height: 120px;
         margin-bottom: 30px;
         width: 100%;
@@ -252,34 +382,39 @@ html {
         align-items: flex-start;
         text-transform: uppercase;
     }
+
     #nav #nav-part1 {
         /* background-color: #ffa500; */
         height: 83px;
         overflow: hidden;
     }
-    #nav #nav-part1 svg{
-      display: block;
+
+    #nav #nav-part1 svg {
+        display: block;
     }
-    #nav #nav-part2{
+
+    #nav #nav-part2 {
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 50px;
     }
-    #nav  #links a{
+
+    #nav #links a {
         text-decoration: none;
         color: #333;
         margin: 0 20px;
         font-size: 13px;
         display: none;
-    
-    }
-    #nav #icons i{
-        margin: 0 20px;
-        font-size: 20px;
-    
+
     }
 
-    
-   
+    #nav #icons i {
+        margin: 0 20px;
+        font-size: 20px;
+
+    }
+
+
+
 }
