@@ -170,14 +170,14 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5vh 5vw;
+    padding: 5vh 1vw;
 }
 
 #page4 .left h1 {
-    font-size: 60px;
+    font-size: 5vw;
     font-weight: 900;
     font-family: Arial, Helvetica, sans-serif;
-    line-height: 58px;
+    line-height: 5vw;
 }
 
 #page4 .right p {
@@ -188,10 +188,11 @@ html {
 
 #page4 .right .p {
     border-bottom: 1px solid black;
-    width: 108px;
+    width: 118px;
     font-size: 12px;
     margin-top: 20px;
     margin-left: 60px;
+    transition: all ease .2s;
 }
 
 #page4 .right .p:hover {
@@ -293,7 +294,7 @@ html {
    text-align: end;
 }
 #footer .two svg{
-    width: 40%;
+    width: 20vw;
     height: 50%;
 }
 
@@ -352,6 +353,20 @@ html {
         overflow: hidden;
         margin-bottom: 3vw;
     }
+    #page4{
+        flex-direction: column;
+    }
+  
+    #page4 .right {
+       margin-bottom: 160px;
+    }
+    #page4 .right p {
+        font-size: 17px;
+        line-height: 24px;
+        padding: 0 4vw;
+        transition: all ease .3s;
+    }
+
 
     #page5 {
         min-height: 100vh;
@@ -368,6 +383,22 @@ html {
         width: 90vw;
         padding: 5vw;
 
+    }
+    #page6{
+        flex-direction: column;
+    }
+    #page6 .right {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    
+    }
+    #page6 .left {
+        height: 100%;
+        width: 100%;
+    
     }
 
     #nav {
@@ -414,7 +445,38 @@ html {
         font-size: 20px;
 
     }
-
+    #footer {
+        flex-direction: column;
+        padding: 0;
+        height: 50%;
+        
+    }
+    #footer .two{
+        width: 100%;
+        height: 50%;
+        padding: 0;
+       
+    }
+    #footer .one{
+        width: 100%;
+        height: 50%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 50px;
+    }
+    #footer .three{
+    
+        width: 100%;
+        height: 50%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 50px;
+    }
+#footer .three p{
+    text-align: center;
+}
 
 
 }
